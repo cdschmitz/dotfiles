@@ -10,6 +10,14 @@ node_modules/
 *.swp
 *.orig
 
+# Vim #
+#######
+%*
+*.sw[a-z]
+*.un~
+.netrwhist
+Session.vim
+
 # Config Files #
 ################
 .rvmrc
@@ -25,6 +33,7 @@ node_modules/
 *.exe
 *.o
 *.so
+*.pyc
 
 # Packages #
 ############
@@ -45,11 +54,14 @@ dump.rdb
 *.log
 *.sql
 *.sqlite
+npm-debug.log
 
 # OS generated files #
 ######################
 .DS_Store
 .DS_Store?
+.localized
+.LSOverride
 ._*
 .Spotlight-V100
 .Trashes
