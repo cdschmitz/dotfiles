@@ -1,0 +1,91 @@
+# vim: ft=conf
+
+OS="$(uname -s)"
+
+alias u="cd .."
+alias u2="cd ../.."
+alias u3="cd ../../.."
+alias u4="cd ../../../.."
+alias u5="cd ../../../../.."
+alias u6="cd ../../../../../.."
+alias u7="cd ../../../../../../.."
+
+alias .b="vim $HOME/.bashrc"
+alias .bl="vim $HOME/.bashrc.local"
+alias .v="vim $HOME/.vimrc"
+alias .vim="cd $HOME/.vim"
+alias envs="env | sort"
+alias h="history"
+alias hosts="sudo $EDITOR /etc/hosts"
+alias o="open"
+alias s="source $HOME/.bashrc"
+
+# ls
+# LC_COLLATE=C  -->  ascii sort
+if ls --color > /dev/null 2>&1; then  # GNU
+    colorflag="--color"
+else  # OSX
+    colorflag="-G"
+fi
+
+if ls --group-directories-first &> /dev/null; then
+    dirflag="--group-directories-first"
+else
+    dirflag=""
+fi
+
+alias ls="LC_COLLATE=C CLICOLOR_FORCE=1 ls -Flhp ${colorflag} ${dirflag}"
+alias lsa="ls -A"
+alias lsd="ls | grep '^d'"
+
+# python/virtualenv
+alias de="deactivate"
+alias freeze="pip freeze"
+alias pyserver="python -m SimpleHTTPServer"
+
+# node
+alias grunt="./node_modules/.bin/grunt"
+alias gulp="./node_modules/.bin/gulp"
+
+# Copy to clipboard
+alias cc="tr -d '\n' | pbcopy"
+if [ "$OS" == 'Linux' ]; then
+    alias cc="xclip -selection clip'
+fi
+
+# Recursively delete '.DS_Store' files
+alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
+
+# git root
+alias gr="[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+if [ "$OS" == 'Linux' ]; then
+    alias local-ip="ifconfig | \
+                    | grep 'inet addr' \
+                    | grep -v '127.0.0.1' \
+                    | cut -d: -f2 \
+                    | cut -d' ' -f1"
+fi
+
+# Hide/Show hidden files in Finder
+if [ "$OS" == 'Darwin' ]; then
+    alias hide-hidden-files='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
+    alias show-hidden-files='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
+fi
+
+# Lock screen
+if [ "$OS" == 'Darwin' ]; then
+    alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+elif [ "$OS" == 'Linux' ]; then
+    alias lock='gnome-screensaver-command --lock'
+fi
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"
+
+unset colorflag
+unset dirflag
+unset OS
