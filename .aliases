@@ -50,7 +50,7 @@ alias gulp="./node_modules/.bin/gulp"
 # Copy to clipboard
 alias cc="tr -d '\n' | pbcopy"
 if [ "$OS" == 'Linux' ]; then
-    alias cc="xclip -selection clip'
+    alias cc="xclip -selection clip"
 fi
 
 # Recursively delete '.DS_Store' files
