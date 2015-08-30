@@ -10,6 +10,10 @@ shopt -s nocaseglob;
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend;
 
+# Do not attempt to search the PATH for possible completions when
+# completion is attempted on an empty line
+shopt -s no_empty_cmd_completion
+
 # Load the shell dotfiles, and then some:
 for file in ~/.{bash_prompt,exports,aliases,functions,bash.local}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
