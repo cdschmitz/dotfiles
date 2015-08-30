@@ -1,5 +1,3 @@
-# vim: ft=conf
-
 OS="$(uname -s)"
 
 alias u="cd .."
