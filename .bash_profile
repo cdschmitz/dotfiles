@@ -15,7 +15,7 @@ shopt -s histappend;
 shopt -s no_empty_cmd_completion
 
 # Load the shell dotfiles, and then some:
-for file in ~/.{bash_prompt,exports,aliases,functions,bash.local}; do
+for file in ~/.{git-completion.bash,bash_prompt,exports,aliases,functions,bash.local}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
