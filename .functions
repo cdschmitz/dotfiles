@@ -13,6 +13,15 @@ function ccp () {
     fi
 }
 
+function fcp () {
+    local file="$1"
+    if [[ ! -f $file ]]; then
+        echo "File not found: $file"
+        return 1
+    fi
+    cat $file | pbcopy
+}
+
 # virtualenvwrapper
 venvwrapper=/usr/local/bin/virtualenvwrapper.sh
 [ -r "$venvwrapper" ] && [ -f "$venvwrapper" ] && source "$venvwrapper";
