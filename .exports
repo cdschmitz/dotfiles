@@ -43,5 +43,5 @@ export LS_COLORS='di=36:ex=31:ln=35:or=41:mi=41:pi=93'
 # Dont tab complete .svn directories
 export FIGNORE=.svn
 
-# export TERM="xterm-color"
-# unset COLORFGBG
+export TERM="xterm-color"
+unset COLORFGBG
