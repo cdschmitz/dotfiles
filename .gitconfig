@@ -17,15 +17,12 @@
     sl    = stash list
 
 [color]
-    #diff = auto
-    #status = auto
-
     # Use colors in Git commands that are capable of colored output when
     # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
     ui = auto
 
 [color "branch"]
-    current = yellow reverse
+    current = cyan bold
     local = yellow
     remote = green
 
@@ -36,9 +33,10 @@
     old = red           # deletions
 
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+    added = green
+    branch = cyan bold
+    changed = red
+    untracked = magenta
 
 [core]
     editor = vim

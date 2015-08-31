@@ -14,6 +14,7 @@ alias .v="vim $HOME/.vimrc"
 alias .vim="cd $HOME/.vim"
 alias dotfiles="cd ~/dotfiles"
 alias envs="env | sort"
+alias g="git"
 alias h="history"
 alias hosts="sudo $EDITOR /etc/hosts"
 alias o="open"
@@ -56,7 +57,7 @@ fi
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # git root
-alias gr="[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`"
+alias gr='[ ! -z $(git rev-parse --show-cdup) ] && cd $(git rev-parse --show-cdup || pwd)'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
