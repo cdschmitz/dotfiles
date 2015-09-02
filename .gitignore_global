@@ -43,7 +43,7 @@ Session.vim
 *.dmg
 *.gz
 *.iso
-*.jar
+#*.jar
 *.rar
 *.tar
 *.zip
