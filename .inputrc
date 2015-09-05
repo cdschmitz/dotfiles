@@ -24,6 +24,9 @@ set completion-query-items 200
 # Show extra file information when completing, like `ls -F` does
 set visible-stats on
 
+# Tab completion for symlink directories
+set mark-symlinked-directories on
+
 # vi shortcuts
 set editing-mode vi
 $if mode=vi
