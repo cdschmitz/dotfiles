@@ -40,7 +40,7 @@ else
 fi
 
 alias ls="LC_COLLATE=C CLICOLOR_FORCE=1 ls -Flhp ${colorflag} ${dirflag}"
-alias lsa="ls -A"
+alias lsa="ls -a"
 alias lsd="ls | grep '^d'"
 
 # python/virtualenv
