@@ -51,6 +51,7 @@ alias pyserver="python -m SimpleHTTPServer"
 # node
 alias grunt="./node_modules/.bin/grunt"
 alias gulp="./node_modules/.bin/gulp"
+alias gw="gulp watch"
 
 # Copy to clipboard
 alias cc="tr -d '\n' | pbcopy"
