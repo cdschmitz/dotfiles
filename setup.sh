@@ -9,6 +9,7 @@ declare -a FILES_TO_SYMLINK=(
     '.bash_profile'
     '.bash_prompt'
     '.bashrc'
+    '.eslintrc'
     '.exports'
     '.functions'
     '.inputrc'
