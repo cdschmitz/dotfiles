@@ -61,6 +61,19 @@
         "wrap-iife": [2, "inside"],
         "yoda": 1,
 
+        // Variables
+        "init-declarations": 0,
+        "no-catch-shadow": 0,
+        "no-delete-var": 2,
+        "no-label-var": 2,
+        "no-shadow-restricted-names": 2,
+        "no-shadow": [1, {"builtinGlobals": true}],
+        "no-undef-init": 2,
+        "no-undef": [2, {typeof: true}]
+        "no-undefined": 0,
+        "no-unused-vars": 2,
+        "no-use-before-define": [2, "nofunc"],
+
         // Style
         "indent": [2, 4],
         "linebreak-style": [2, "unix"],
