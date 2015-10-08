@@ -96,7 +96,10 @@
         "eol-last": 2,
         "func-names": 2,
         "func-style": [2, "declaration"],
-        "id-length": [2, {"exceptions": ["i", "j"]}],
+        "id-length": [2, {
+            "exceptions": ["i", "j"],
+            "properties": "never"
+        }],
         "indent": [2, 4],
         "jsx-quotes": [2, "prefer-single"],
         "key-spacing": 2,
