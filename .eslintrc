@@ -109,7 +109,7 @@
             "allowBlockStart": true
         }],
         "linebreak-style": [2, "unix"],
-        "max-nested-callbacks": 2,
+        "max-nested-callbacks": 3,
         "new-cap": [2, {
             "newIsCap": true,
             "capIsNew": false,
