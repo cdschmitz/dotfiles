@@ -4,7 +4,7 @@
         "strict": [2, "global"],
 
         // Possible Errors
-        "no-console": 1,
+        "no-console": 0,
 
         // Best Practices
         "accessor-pairs": 1,
