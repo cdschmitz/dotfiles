@@ -15,8 +15,15 @@ function save () {
     [[ -z $file ]] && echo "No argument provided." && return 1
     [[ ! -e $file ]] && echo "$file does not exist." && return 2
 
-    local filename=$(basename "$file"){,.save}
-    local backup=$(dirname "$file")/$filename
+    local base_saved_filename=$(basename "$file"){,.save}
+    local saved_filename=$base_saved_filename
+    local n=1
+    while [ -e $saved_filename ]; do
+        saved_filename="${base_saved_filename}${n}"
+        (( n += 1 ))
+    done
+
+    local backup=$(dirname "$file")/$saved_filename
     cp -R "$file" "$backup"
 }
 
