@@ -105,7 +105,7 @@
             "exceptions": ["i", "j"],
             "properties": "never"
         }],
-        "indent": [2, 4],
+        "indent": [2, 2],
         "jsx-quotes": [2, "prefer-single"],
         "key-spacing": 2,
         "lines-around-comment": [2, {
