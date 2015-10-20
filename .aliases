@@ -39,7 +39,7 @@ else
     dirflag=""
 fi
 
-alias ls="LC_COLLATE=C CLICOLOR_FORCE=1 ls -Flhp ${colorflag} ${dirflag}"
+alias ls="LC_ALL=C CLICOLOR_FORCE=1 ls -Flhp ${colorflag} ${dirflag}"
 alias lsa="ls -a"
 alias lsd="ls | grep '^d'"
 
