@@ -34,7 +34,7 @@
         "no-iterator": 2,
         "no-labels": 2,
         "no-lone-blocks": 2,
-        "no-loop-func": 1,
+        "no-loop-func": 0,
         "no-multi-spaces": 1,
         "no-multi-str": 1,
         "no-native-reassign": 2,
