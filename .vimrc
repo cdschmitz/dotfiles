@@ -67,9 +67,10 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = {
     \ "mode": "passive"}
 
-" HTML/Javascript
+" HTML/Javascript/JSX
 autocmd FileType html,htmldjango,javascript,javascript.jsx inoremap cslg console.log();<Esc>hi
 autocmd FileType html,htmldjango,javascript,javascript.jsx inoremap db; debugger;
+autocmd FileType html,htmldjango,javascript,javascript.jsx set tabstop=2 shiftwidth=2
 autocmd FileType html,htmldjango inoremap dtt {%  %}<Esc>2hi
 autocmd FileType html,htmldjango inoremap dbr {{  }}<Esc>2hi
 
