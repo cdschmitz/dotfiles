@@ -1,8 +1,19 @@
-if v:version > 700
-    execute pathogen#infect()
-endif
+" Vundle config
+set nocompatible
+filetype off
 
-filetype plugin indent on
+" set the runtime path to include Vundle and initialize
+" Keep Plugin commands between vundle#begin/end
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'elzr/vim-json'
+Plugin 'mxw/vim-jsx'
+call vundle#end()
+filetype plugin indent on  " required
+
 filetype indent on
 syntax on
 set modeline
@@ -62,8 +73,9 @@ command SR SyntasticReset
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_jump = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_mode_map = {
     \ "mode": "passive"}
 
