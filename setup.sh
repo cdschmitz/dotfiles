@@ -50,6 +50,12 @@ main() {
             execute "ln -fs $sourceFile $targetFile" "$targetFile → $sourceFile"
         fi
     done
+
+    $vimBundle=~/.vim/bundle
+    if [ ! -d $vimBundle ]; then
+        git clone https://github.com/VundleVim/Vundle.vim.git $vimBundle/Vundle.vim
+        vim +PluginInstall +qall
+    fi
 }
 
 main
