@@ -11,6 +11,7 @@ Plugin 'fholgado/minibufexpl.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'elzr/vim-json'
 Plugin 'mxw/vim-jsx'
+Plugin 'editorconfig/editorconfig-vim'
 call vundle#end()
 filetype plugin indent on  " required
 
@@ -82,7 +83,7 @@ let g:syntastic_mode_map = {
 " HTML/Javascript/JSX
 autocmd FileType html,htmldjango,javascript,javascript.jsx inoremap cslg console.log();<Esc>hi
 autocmd FileType html,htmldjango,javascript,javascript.jsx inoremap db; debugger;
-autocmd FileType html,htmldjango,javascript,javascript.jsx set tabstop=2 shiftwidth=2
+autocmd FileType cpp,html,htmldjango,javascript,javascript.jsx set tabstop=2 shiftwidth=2
 autocmd FileType html,htmldjango inoremap dtt {%  %}<Esc>2hi
 autocmd FileType html,htmldjango inoremap dbr {{  }}<Esc>2hi
 
