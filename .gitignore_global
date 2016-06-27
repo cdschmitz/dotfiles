@@ -2,6 +2,7 @@
 
 # Bundled Plugins #
 ###################
+bower_components/
 node_modules/
 
 # Temporary Files #
