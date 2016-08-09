@@ -12,11 +12,15 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'elzr/vim-json'
 Plugin 'mxw/vim-jsx'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'lepture/vim-jinja'
+Plugin 'groenewege/vim-less'
 call vundle#end()
 filetype plugin indent on  " required
 
 filetype indent on
 syntax on
+set backupcopy=yes
 set modeline
 set modelines=5
 set number
@@ -32,6 +36,8 @@ set t_vb=
 set visualbell
 set incsearch
 set nohlsearch
+
+" autocmd QuickFixCmdPost [^l]* nested cwindow
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -81,9 +87,9 @@ let g:syntastic_mode_map = {
     \ "mode": "passive"}
 
 " HTML/Javascript/JSX
-autocmd FileType html,htmldjango,javascript,javascript.jsx inoremap cslg console.log();<Esc>hi
-autocmd FileType html,htmldjango,javascript,javascript.jsx inoremap db; debugger;
-autocmd FileType cpp,html,htmldjango,javascript,javascript.jsx set tabstop=2 shiftwidth=2
+autocmd FileType html,htmldjango,javascript,javascript.jsx,typescript inoremap cslg console.log();<Esc>hi
+autocmd FileType html,htmldjango,javascript,javascript.jsx,typescript inoremap db; debugger;
+autocmd FileType cpp,html,htmldjango,javascript,javascript.jsx,typescript set tabstop=2 shiftwidth=2
 autocmd FileType html,htmldjango inoremap dtt {%  %}<Esc>2hi
 autocmd FileType html,htmldjango inoremap dbr {{  }}<Esc>2hi
 
