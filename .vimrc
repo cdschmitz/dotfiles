@@ -15,6 +15,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'lepture/vim-jinja'
 Plugin 'groenewege/vim-less'
+Plugin 'jpalardy/vim-slime'
 call vundle#end()
 filetype plugin indent on  " required
 
@@ -66,8 +67,11 @@ nnoremap <silent> <Tab> :MBEbn<CR>
 nnoremap <silent> <S-Tab> :MBEbp<CR>
 
 " Code folding
-" autocmd BufWrite *.* mkview
-" autocmd BufRead *.* silent loadview
+autocmd BufWrite *.* mkview
+autocmd BufRead *.* silent loadview
+
+" Vim Slime
+let g:slime_default_config = {"sessionname": "node-screen", "windowname": "node-window"}
 
 " Mustache abbreviations
 let g:mustache_abbreviations = 1
