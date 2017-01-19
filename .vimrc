@@ -46,6 +46,7 @@ match ExtraWhitespace /\s\+$/
 command DW %s/\s\+$//g
 command MD5 .!md5 -q %
 command SHA .!shasum -a 256 %
+command RE syntax sync fromstart
 
 nore ; :
 nore : ;
