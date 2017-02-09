@@ -51,7 +51,7 @@ main() {
         fi
     done
 
-    $vimBundle=~/.vim/bundle
+    vimBundle=~/.vim/bundle
     if [ ! -d $vimBundle ]; then
         git clone https://github.com/VundleVim/Vundle.vim.git $vimBundle/Vundle.vim
         vim +PluginInstall +qall
