@@ -6,16 +6,18 @@ filetype off
 " Keep Plugin commands between vundle#begin/end
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'elzr/vim-json'
-Plugin 'mxw/vim-jsx'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'lepture/vim-jinja'
+Plugin 'elzr/vim-json'
+Plugin 'fholgado/minibufexpl.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'jpalardy/vim-slime'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'lepture/vim-jinja'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-surround'
+Plugin 'VundleVim/Vundle.vim'
 call vundle#end()
 filetype plugin indent on  " required
 
@@ -68,8 +70,8 @@ nnoremap <silent> <Tab> :MBEbn<CR>
 nnoremap <silent> <S-Tab> :MBEbp<CR>
 
 " Code folding
-autocmd BufWrite *.* mkview
-autocmd BufRead *.* silent loadview
+" autocmd BufWrite *.* mkview
+" autocmd BufRead *.* silent loadview
 
 " Vim Slime
 let g:slime_default_config = {"sessionname": "node-screen", "windowname": "node-window"}
