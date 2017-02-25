@@ -20,6 +20,7 @@ alias c="clear"
 alias dotfiles="cd ~/dotfiles"
 alias envs="env | sort"
 alias g="git"
+alias grep="grep -n --color"
 alias h="history"
 alias hosts="sudo $EDITOR /etc/hosts"
 alias myps="ps -ef | grep $USER"
@@ -40,7 +41,7 @@ else
     dirflag=""
 fi
 
-alias ls="LC_ALL=C CLICOLOR_FORCE=1 ls -Flhp ${colorflag} ${dirflag}"
+alias ls="CLICOLOR_FORCE=1 ls -Flhp ${colorflag} ${dirflag}"
 alias lsa="ls -a"
 alias lsd="ls | grep '^d'"
 
