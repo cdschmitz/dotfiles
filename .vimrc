@@ -78,6 +78,9 @@ let g:slime_default_config = {"sessionname": "node-screen", "windowname": "node-
 
 " Mustache abbreviations
 let g:mustache_abbreviations = 1
+
+" vim-json
+let g:vim_json_syntax_conceal = 0
 let g:vim_json_syntax_concealcursor = 0
 
 " Syntastic
@@ -97,7 +100,7 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 " HTML/Javascript/JSX
 autocmd FileType html,htmldjango,javascript,javascript.jsx,typescript inoremap cslg console.log();<Esc>hi
 autocmd FileType html,htmldjango,javascript,javascript.jsx,typescript inoremap db; debugger;
-autocmd FileType cpp,html,htmldjango,javascript,javascript.jsx,typescript set tabstop=2 shiftwidth=2
+autocmd FileType cpp,html,htmldjango,javascript,javascript.jsx,json,typescript set tabstop=2 shiftwidth=2
 autocmd FileType html,htmldjango inoremap dtt {%  %}<Esc>2hi
 autocmd FileType html,htmldjango inoremap dbr {{  }}<Esc>2hi
 
