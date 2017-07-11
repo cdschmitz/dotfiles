@@ -18,7 +18,7 @@ shopt -s no_empty_cmd_completion
 bind Space:magic-space
 
 # Load the shell dotfiles, and then some:
-for file in ~/.{git-completion.bash,exports,aliases,functions,bash_prompt,bashrc.local}; do
+for file in ~/.{git-completion.bash,exports,aliases,functions,bash_prompt,bashrc,bashrc.local}; do
    [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
