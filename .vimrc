@@ -104,6 +104,10 @@ autocmd FileType cpp,html,htmldjango,javascript,javascript.jsx,json,typescript s
 autocmd FileType html,htmldjango inoremap dtt {%  %}<Esc>2hi
 autocmd FileType html,htmldjango inoremap dbr {{  }}<Esc>2hi
 
+" PHP
+autocmd FileType php set tabstop=3 shiftwidth=3
+autocmd FileType php inoremap vd; var_dump();<Esc>hi
+
 " Python
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python set nosmartindent
