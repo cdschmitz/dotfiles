@@ -95,7 +95,7 @@ let g:syntastic_mode_map = {
     \ "mode": "passive"}
 
 
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType xml,yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " HTML/Javascript/JSX
 autocmd FileType html,htmldjango,javascript,javascript.jsx,typescript inoremap cslg console.log();<Esc>hi
