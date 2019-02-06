@@ -21,6 +21,7 @@ Plugin 'VundleVim/Vundle.vim'
 call vundle#end()
 filetype plugin indent on  " required
 
+color desert
 filetype indent on
 syntax on
 set backupcopy=yes
