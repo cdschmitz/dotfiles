@@ -35,7 +35,8 @@ export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 # github.com/trapd00r/LS_COLORS
 # command -v gdircolors >/dev/null 2>&1 || alias gdircolors="dircolors"
 # eval "$(gdircolors -b ~/.dircolors)"
-export LS_COLORS='di=36:ex=31:ln=35:or=41:mi=41:pi=93'
+#export LS_COLORS='di=36:ex=31:ln=35:or=41:mi=41:pi=93'
+export LSCOLORS="gxfxcxdxbxegedabagacad"
 
 # Dont tab complete .svn directories
 export FIGNORE=.svn
