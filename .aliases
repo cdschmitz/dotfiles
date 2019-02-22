@@ -55,7 +55,6 @@ alias pyserver="python -m SimpleHTTPServer"
 # node
 alias grunt="./node_modules/.bin/grunt"
 alias gulp="./node_modules/.bin/gulp"
-alias gw="gulp watch"
 alias node-screen="screen -S node-screen -t node-window 'node'"
 
 # Copy to clipboard
