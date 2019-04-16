@@ -1,3 +1,10 @@
+function b64_to_p12() {
+    local b64file="$1"
+    if [[ -n "$b64file" ]]; then
+        cat "$b64file" | base64 -D > "${b64file}.p12"
+    fi
+}
+
 # Copy file to clipboard
 function fcp () {
     local file="$1"
@@ -6,6 +13,16 @@ function fcp () {
         return 1
     fi
     cat $file | pbcopy
+}
+
+function open_p12() {
+    if [[ -n "$1" ]]; then
+        openssl pkcs12 -info -in "$1"
+    fi
+}
+
+function process_on_port() {
+    [[ -n "$1" ]] && sudo lsof -i ":$1"
 }
 
 # Save a backup of whatever file is passed to this function.
@@ -26,7 +43,3 @@ function save () {
     local backup=$(dirname "$file")/$saved_filename
     cp -R "$file" "$backup"
 }
-
-# virtualenvwrapper
-venvwrapper=/usr/local/bin/virtualenvwrapper.sh
-[ -r "$venvwrapper" ] && [ -f "$venvwrapper" ] && source "$venvwrapper";
