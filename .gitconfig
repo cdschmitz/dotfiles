@@ -11,6 +11,7 @@
     l     = log
     lp    = log -p
     ls    = log --pretty=oneline
+    rpo   = remote prune origin
     rs    = remote show
     rso   = remote show origin
     s     = status
