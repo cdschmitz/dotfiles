@@ -28,7 +28,7 @@ if type __git_complete &> /dev/null; then
     __git_complete g __git_main
 fi;
 
-command -v pyenv && eval "$(pyenv init -)"
+command -v pyenv &> /dev/null && eval "$(pyenv init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/cschmitz/.sdkman"
