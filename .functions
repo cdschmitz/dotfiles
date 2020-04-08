@@ -25,6 +25,14 @@ function process_on_port() {
     [[ -n "$1" ]] && sudo lsof -i ":$1"
 }
 
+function remove_backslashes() {
+    [[ -f "$1" ]] && sed 's/\\//g' < "$1"
+}
+
+function stringify_json() {
+    [[ -f "$1" ]] && node -e "console.log(JSON.stringify(JSON.stringify(require('./$1'))))"
+
+}
 # Save a backup of whatever file is passed to this function.
 # Directories are copied recursively.
 function save () {
