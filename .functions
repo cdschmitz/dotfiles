@@ -15,6 +15,14 @@ function fcp () {
     cat $file | pbcopy
 }
 
+function json_parse() {
+    [[ -f "$1" ]] && node -e "console.log(JSON.stringify(JSON.parse(JSON.parse(require('fs').readFileSync('./$1', 'utf8'))), null, 2));"
+}
+
+function json_stringify() {
+    [[ -f "$1" ]] && node -e "console.log(JSON.stringify(JSON.stringify(require('./$1'))))"
+}
+
 function open_p12() {
     if [[ -n "$1" ]]; then
         openssl pkcs12 -info -in "$1"
@@ -29,10 +37,6 @@ function remove_backslashes() {
     [[ -f "$1" ]] && sed 's/\\//g' < "$1"
 }
 
-function stringify_json() {
-    [[ -f "$1" ]] && node -e "console.log(JSON.stringify(JSON.stringify(require('./$1'))))"
-
-}
 # Save a backup of whatever file is passed to this function.
 # Directories are copied recursively.
 function save () {
